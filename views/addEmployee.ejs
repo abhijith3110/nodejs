@@ -1,0 +1,167 @@
+<div class="add-employee-form">
+    <div class="container">
+      <div class="col-md-8 content py-3 rounded-4 px-3">
+        <form id="add-employee-form" enctype="multipart/form-data">
+          <div class="heading-form">
+            <label for="" class="heading my-3">Add Employee</label>
+            <button id="close-btn" onclick="close_form(location.reload())"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <!-- 1.row -->
+          <div class="row">
+              <div class="col-md-12 upload_image">
+                <input type="file" accept="image/*" id="input-file" name="image" hidden>
+                <div class="card align-items-center py-3 rounded-4" id="img-view">
+                  <img src="/uploads/" style="width: 150px;margin-right: 0px;margin-bottom: 20px;" alt=""id="uploadedImage">
+                  <i id="uploadIcon" class="fa-solid fa-cloud-arrow-up"></i>
+                  <div class="error-alert" id="input-file-error" style="display: none">Please select a file.</div>
+                  <h5 class="card-heading" id="imgtag">Upload Image</h5>
+                  <span id="uploadSpan">PNG, JPG files are allowed</span>
+                  <button type="button" class="btn btn-primary" id="uploadImgBtn">
+                    <label for="input-file" id="drop-area">click here to upload image/change Image here
+                  </label>
+                </button>
+                </div>
+              </div>
+            </label>
+          </div>  
+          <!-- 2.row -->
+          <div class="row">
+            <div class="input-section col-md-3">
+              <label for="" class="form-label mt-3 mb-2">Salutation</label>
+              <select class="form-select rounded-3" aria-label="Default select example" id="salutation">
+                <option selected>Select</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+              </select>
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+            <div class="input-section col-md-4">
+              <label for="" class="form-label mt-3 mb-2">First Name</label>
+              <input type="text" class="form-control rounded-3" placeholder="john" aria-label="First name"
+                id="FirstName">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+            <div class="input-section col-md-5">
+              <label for="" class="form-label mt-3 mb-2">Last Name</label>
+              <input type="text" class="form-control rounded-3" placeholder="doe " aria-label="First name"
+                id="LastName">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+          </div>
+          <!-- 3.row -->
+          <div class="row">
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">Email Address</label>
+              <input type="email" class="form-control rounded-3" placeholder="mail@simmmple.com" aria-label="email"
+                id="Email">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">Mobile Number</label>
+              <input type="text" class="form-control rounded-3" placeholder="enter mobile number" aria-label="text"
+                id="Phone">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+          </div>
+          <!-- 4.row -->
+          <div class="row">
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">Date of Birth</label>
+              <input type="date" class="form-control rounded-3" style="color: #949DB9;" placeholder="select" aria-label="calender" id="dob">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+            <div class="input-section col-md-6">
+              <label for="gender" class="form-label mt-3 mb-3">Gender</label><br>
+              <input class="form-check-input" type="radio" name="gender" value="Male" id="male">
+              <label class="form-check-label me-4" for="male">
+                Male
+              </label>
+              <input class="form-check-input" type="radio" name="gender" value="Female" id="female">
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+              <p id="genderError" class="error-alert">Please select this field</p>
+            </div>
+          </div>
+          
+          <!-- 4.5row -->
+          <div class="row">
+            <div class="input-section col-md-12">
+              <label for="" class="form-label mt-3 mb-2">Qualifications</label>
+              <input type="text" class="form-control rounded-3" placeholder="enter address" aria-label="address"
+                id="Qualifications">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+          </div>
+          <!-- 5.row -->
+          <div class="row">
+            <div class="input-section col-md-12">
+              <label for="" class="form-label mt-3 mb-2">Address</label>
+              <input type="text" class="form-control rounded-3" placeholder="enter address" aria-label="address"
+                id="address">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+          </div>
+          <!-- 6.row -->
+          <div class="row">
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">Country</label>
+              <select class="form-select detail-select rounded-3" style="color: #949DB9;"
+                aria-label="Default select example" id="country">
+                <option selected>Select</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Australia">Australia</option>
+              </select>
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">State</label>
+              <select class="form-select detail-select rounded-3" style="color: #949DB9;"
+                aria-label="Default select example" id="state">
+                <option selected>Select</option>
+                <option value="Kerala">Kerala</option>
+                <option value="tamilnadu">Tamil nadu</option>
+                <option value="Karnataka">Karnataka</option>
+              </select>
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+          </div>
+          <!-- 7.row -->
+          <div class="row">
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">City</label>
+              <input type="text" class="form-control rounded-3" placeholder="enter city" aria-label="city" id="city">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">Pin/Zip</label>
+              <input type="text" class="form-control rounded-3" placeholder="enter zip/pin" aria-label="city"
+                id="pin">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-section col-md-6">
+              <label for="" class="form-label mt-3 mb-2">username</label>
+              <input type="text" class="form-control rounded-3" placeholder="enter city" aria-label="city" id="username">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+            <div class="input-section col-md-6">
+              <label for="password" class="form-label mt-3 mb-2">password</label>
+              <input type="password" id="password" class="form-control rounded-3" placeholder="enter password" aria-label="password">
+              <label for="" class="error-alert">This Space is empty</label>
+            </div>
+          </div>
+          
+          <!-- row.8 -->
+          <div class="row">
+            <div class="input-section col-md-12 mt-4 mb-3">
+              <button type="button" class="btn btn-light btn-main" onclick="close_form(location.reload())">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-filled btn-main " id="addemployee" onclick="validateForm()">Add Employee</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

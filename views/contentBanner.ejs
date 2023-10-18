@@ -1,0 +1,76 @@
+<div class="content-section">
+    <div class="main-box-heading">
+      <div class="content-heading">
+        <h3>Dashboard / Employees</h3>
+        <h1>Employees</h1>
+      </div>
+      <div class="search-section">
+        <input type="search" placeholder="&#xF002; Search" style="font-family:Arial,FontAwesome; padding: 10px;" id="searchEmployee"  name="q" onkeyup="searchEmployee()">
+        <i class="fa-regular fa-bell"></i>
+        <div class="searchImg">
+          <img src="Assets/images/Elipse 5.png" alt="img">
+        </div>
+      </div>
+    </div>
+    <div class="row-data-box">
+      <div class="main-row-heading">
+        <div class="row-heading">
+          <h2>Employees List</h2>
+          <select class="form-select num-select" id="selectemp">
+            <option selected>4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+          </select>
+          <p id="EmployeeTotal"></p>
+        </div>
+        <div class="btn">
+          <button class="heading-btn" type="button" onclick="employeebtn()">Add Employee</button>
+        </div>
+      </div>
+      <div class="main-table">
+        <table class="table">
+          <thead>
+            <tr>
+              <th><select class="tabel-header">
+                  <option selected>Sl.No</option>
+              </th>
+              <th><select class="tabel-header name-header">
+                  <option selected>Name</option>
+              </th>
+              <th><select class="tabel-header email-header">
+                  <option selected>Email</option>
+              </th>
+              <th><select class="tabel-header phone-header">
+                  <option selected>Phone</option>
+              </th>
+              <th><select class="tabel-header">
+                  <option selected>Gender</option>
+              </th>
+              <th><select class="tabel-header dob-header">
+                  <option selected>DOB</option>
+              </th>
+              <th><select class="tabel-header country-header">
+                  <option selected>Country</option>
+              </th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody class="table-body" id="table-body">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p id="userError">User not Found.......</p>
+      <div class="pagination" id="pagination"></div>
+    <div class="content-footer">
+      <div class="left-footer-content">
+        <p>© 2023 All Rights Reserved. <a href="#"> Stackup</a></p>
+      </div>
+      <div class="right-footer-content">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
